@@ -34,7 +34,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="Números"
+        android:text="Números:"
         android:textColor="@color/colorAccent"
         app:layout_constraintEnd_toStartOf="@+id/switchNumeros"
         app:layout_constraintHorizontal_bias="0.0"
@@ -50,7 +50,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="Minúsculas"
+        android:text="Minúsculas:"
         android:textColor="@color/colorAccent"
         app:layout_constraintEnd_toStartOf="@+id/switchMinuscolas"
         app:layout_constraintHorizontal_bias="0.0"
@@ -82,7 +82,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="Maiúscolas:"
+        android:text="Maiúsculas:"
         android:textColor="@color/colorAccent"
         app:layout_constraintEnd_toStartOf="@+id/switchMaiusculas"
         app:layout_constraintHorizontal_bias="0.0"
@@ -95,10 +95,11 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         android:text="Tamanho:"
         android:textColor="@color/colorAccent"
-        app:layout_constraintBaseline_toBaselineOf="@+id/tamanhoEdit"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/maiusculasText" />
 
     <Button
         android:id="@+id/buttonGerar"
@@ -123,12 +124,12 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:checked="false"
+        android:checked="true"
         android:shadowColor="@color/colorAccent"
         android:textColor="@color/colorAccent"
         android:textColorHighlight="@color/colorAccent"
         android:textColorHint="@color/colorAccent"
-        app:barrierAllowsGoneWidgets="false"
+
         app:layout_constraintBaseline_toBaselineOf="@+id/simbolosText"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -138,6 +139,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
+        android:checked="true"
         app:layout_constraintBaseline_toBaselineOf="@+id/numerosText"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -147,6 +149,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
+        android:checked="true"
         app:layout_constraintBaseline_toBaselineOf="@+id/minusculasText"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -156,24 +159,9 @@
         android:layout_height="28dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
+        android:checked="true"
         app:layout_constraintBaseline_toBaselineOf="@+id/maiusculasText"
         app:layout_constraintEnd_toEndOf="parent" />
-
-    <EditText
-        android:id="@+id/tamanhoEdit"
-        android:layout_width="43dp"
-        android:layout_height="49dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:shadowColor="@color/colorPrimary"
-        android:textColor="@color/colorAccent"
-        android:textColorHighlight="@color/colorAccent"
-        android:textColorHint="@color/colorAccent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/switchMaiusculas" />
 
     <TextView
         android:id="@+id/senhaGeradaText"
@@ -196,16 +184,37 @@
 
     <TextView
         android:id="@+id/senhaText"
-        android:layout_width="188dp"
-        android:layout_height="17dp"
+        android:layout_width="317dp"
+        android:layout_height="20dp"
         android:layout_marginBottom="84dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
+        android:gravity="center"
         android:textColor="@color/colorAccent"
         app:layout_constraintBottom_toTopOf="@+id/buttonGerar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTamanho"
+        android:layout_width="41dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:shadowColor="@color/colorAccent"
+        android:textColor="@color/colorAccent"
+        android:textColorHighlight="@color/colorAccent"
+        android:textColorHint="@color/colorAccent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tamanhoText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tamanhoText" />
 
 </android.support.constraint.ConstraintLayout>
