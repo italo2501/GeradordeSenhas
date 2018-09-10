@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        tamanho = findViewById(R.id.tamanhoEdit);
+        tamanho = findViewById(R.id.editTamanho);
         senha = findViewById(R.id.senhaText);
         gerarSenha = findViewById(R.id.buttonGerar);
         numeros = findViewById(R.id.switchNumeros);
